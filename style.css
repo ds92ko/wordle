@@ -1,0 +1,88 @@
+* {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+button {
+  background: none;
+}
+
+.title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  font-size: 36px;
+  border-bottom: 1px solid #000;
+  margin-bottom: 20px;
+}
+
+.inputs {
+  margin: 0 auto 20px;
+  display: grid;
+  max-width: 350px;
+  height: 420px;
+  grid-template-rows: repeat(6, 1fr);
+  grid-gap: 5px;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.inputs .row {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-gap: 5px;
+}
+
+.input {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 32px;
+  font-weight: bold;
+  border: 1px solid #000;
+  text-transform: uppercase;
+}
+
+.keyboard {
+  max-width: 500px;
+  margin: 0 auto 20px;
+  padding: 0 10px;
+}
+
+.keyboard .row {
+  display: flex;
+  width: 100%;
+  margin: 0 auto 8px;
+}
+
+.keyboard .row:nth-of-type(2)::before,
+.keyboard .row:nth-of-type(2)::after {
+  content: '';
+  flex: 0.5;
+}
+
+.key {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-transform: uppercase;
+  font-size: 16px;
+  font-weight: bold;
+  height: 58px;
+  margin-right: 6px;
+  border-radius: 5px;
+  cursor: pointer;
+  color: #000;
+  background-color: #ddd;
+}
+
+.key:last-of-type {
+  margin-right: 0;
+}
+
+.key.ctrl {
+  flex: 1.5;
+}
