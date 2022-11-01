@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
 :root {
   --white: #fff;
   --green: #79b851;
@@ -13,6 +15,7 @@
   border: 0;
   margin: 0;
   padding: 0;
+  font-family: 'Montserrat', sans-serif;
 }
 
 button {
@@ -61,6 +64,8 @@ button {
 
 .input.selected {
   border: 2px solid var(--dark-gray);
+  animation-name: popIn;
+  animation-duration: .3s;
 }
 
 .input.correct {
@@ -126,4 +131,20 @@ button {
 
 .key.ctrl {
   flex: 1.5;
+}
+
+/* animation */
+@keyframes popIn {
+  0% {
+    transform: scale(.8);
+    opacity: 0;
+  }
+  40% {
+    transform: scale(1.1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
 }
