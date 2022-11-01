@@ -37,6 +37,7 @@ function initWordle(answer) {
     let i = 0;
     while(i < inputs.length) {
       if (!inputs[i].innerText) {
+        inputs[i].classList.add('selected');
         inputs[i].innerText = key;
         break;
       }
@@ -50,6 +51,7 @@ function initWordle(answer) {
     let i = 0;
     while(i < inputs.length) {
       if (inputs[i].innerText) {
+        inputs[i].classList.remove('selected');
         inputs[i].innerText = null;
         break;
       }
@@ -67,12 +69,14 @@ function initWordle(answer) {
     else {
       inputs.forEach((input, i) => {
         const v = input.innerText;
+
+        input.classList.remove('selected');
         if (v === answer[i]) {
-          input.style.background = 'green';
+          input.classList.add('correct');
         } else if (answer.includes(v)) {
-          input.style.background = 'yellow';
+          input.classList.add('elsewhere');
         } else {
-          input.style.background = 'lightgray';
+          input.classList.add('absent');
         }
       });
 
