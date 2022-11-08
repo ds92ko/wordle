@@ -69,16 +69,20 @@ function initWordle(answer) {
     else {
       inputs.forEach((input, i) => {
         const v = input.innerText;
+        const key = document.querySelector(`.key[data-key="${v.toLowerCase()}"]`);
 
         input.classList.remove('selected');
         if (v === answer[i]) {
           input.classList.add('correct');
+          key.classList.add('correct');
         }
         else if (answer.includes(v)) {
           input.classList.add('elsewhere');
+          key.classList.add('elsewhere');
         }
         else {
           input.classList.add('absent');
+          key.classList.add('absent');
         }
       });
 

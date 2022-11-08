@@ -133,6 +133,21 @@ button {
   flex: 1.5;
 }
 
+.key.correct {
+  background: var(--green);
+  color: var(--white);
+}
+
+.key.elsewhere {
+  background: var(--yellow);
+  color: var(--white);
+}
+
+.key.absent {
+  background: var(--dark-gray);
+  color: var(--white);
+}
+
 /* animation */
 @keyframes popIn {
   0% {
