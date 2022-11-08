@@ -73,9 +73,11 @@ function initWordle(answer) {
         input.classList.remove('selected');
         if (v === answer[i]) {
           input.classList.add('correct');
-        } else if (answer.includes(v)) {
+        }
+        else if (answer.includes(v)) {
           input.classList.add('elsewhere');
-        } else {
+        }
+        else {
           input.classList.add('absent');
         }
       });
